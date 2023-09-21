@@ -4,7 +4,7 @@ import { API_ROOT } from '../../../appConfig'
 import * as actionTypes from './actionTypes'
 import {homePostsLogout, userProfileLogout, profilePostsLogout, pendingFollowsLogout } from './index'
 import { startAuthTabs, startMainTabs } from '../../screens/Tabs/index'
-import AsyncStorage from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 import { Alert } from 'react-native'
 
 export const authStart = () => {
