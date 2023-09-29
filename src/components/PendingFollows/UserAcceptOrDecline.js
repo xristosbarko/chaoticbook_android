@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
-import {View, Text, Image, Button, TouchableWithoutFeedback, StyleSheet } from 'react-native'
-import * as actions from '../../store/actions/index'
+import {View, Text, Image, TouchableWithoutFeedback, StyleSheet } from 'react-native'
+import { userProfile } from '../../store/actions/userProfile'
 import { DefaultButton } from '../../utils/formElements/DefaultButton'
 
 const UserAcceptOrDecline = (props) => {
@@ -91,7 +91,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onUserProfile: () => dispatch(actions.userProfile())
+		onUserProfile: () => dispatch(userProfile())
 	}
 }
 

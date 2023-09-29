@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import { View, Text, Image, Button, TouchableWithoutFeedback, StyleSheet } from 'react-native'
+import { View, Text, Image, TouchableWithoutFeedback } from 'react-native'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
-import * as actions from '../../store/actions/index'
+import { userProfile } from '../../store/actions/userProfile'
 import { styles } from './styles'
 import { DefaultButton } from '../../utils/formElements/DefaultButton'
 
@@ -117,7 +117,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onUserProfile: () => dispatch(actions.userProfile())
+		onUserProfile: () => dispatch(userProfile())
 	}
 }
 

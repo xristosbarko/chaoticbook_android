@@ -1,5 +1,5 @@
 import React from 'react'
-import {InputElement, SelectElement, DateElement, ImageElement} from './InputElements'
+import { InputElement, SelectElement, DateElement, ImageElement } from './InputElements'
 
 const FormElement = (props) => {
 	let formElement = null

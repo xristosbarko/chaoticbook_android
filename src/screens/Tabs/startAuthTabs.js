@@ -1,11 +1,11 @@
 import { Navigation } from 'react-native-navigation'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+// import Ionicons from 'react-native-vector-icons/Ionicons'
 
 export const startAuthTabs = () => {
-	Promise.all([
-		Ionicons.getImageSource("md-person", 30),
-		Ionicons.getImageSource("md-person-add", 30)
-	]).then(sources => {
+	// Promise.all([
+		// Ionicons.getImageSource("md-person", 30),
+		// Ionicons.getImageSource("md-person-add", 30)
+	// ]).then(sources => {
 		Navigation.setRoot({
 			root: {
 				bottomTabs: {
@@ -26,7 +26,7 @@ export const startAuthTabs = () => {
 									},
 									bottomTab: {
 										text: 'Σύνδεση',
-										icon: sources[0],
+										// icon: sources[0],
 										testID: 'LOGIN_TAB_BAR_BUTTON'
 									}
 								}
@@ -47,7 +47,7 @@ export const startAuthTabs = () => {
 									},
 									bottomTab: {
 										text: 'Εγγραφή',
-										icon: sources[1],
+										// icon: sources[1],
 										testID: 'REGISTER_TAB_BAR_BUTTON'
 									}
 								}
@@ -57,5 +57,5 @@ export const startAuthTabs = () => {
 				}
 			}
 		})
-	})
+	// })
 }

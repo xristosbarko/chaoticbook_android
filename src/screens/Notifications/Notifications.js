@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {View, Text, TouchableWithoutFeedback} from 'react-native'
 import { connect } from 'react-redux'
 import { Navigation } from 'react-native-navigation'
-import * as actions from '../../store/actions/index'
+import { pendingFollows } from '../../store/actions/pendingFollows'
 
 class Notifications extends Component {
 
@@ -51,7 +51,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onPendingFollows: () => dispatch(actions.pendingFollows())
+		onPendingFollows: () => dispatch(pendingFollows())
 	}
 }
 

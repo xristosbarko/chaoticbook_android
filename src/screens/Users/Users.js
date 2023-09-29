@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
-import { View, Text, FlatList, ActivityIndicator } from 'react-native'
+import { View, FlatList, ActivityIndicator } from 'react-native'
 
 import UserDetails from '../../components/Users/UserDetails'
 import { onUsernamePressedHandler } from './Navigation'

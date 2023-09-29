@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {View, Text, TextInput, Button, Keyboard, Alert} from 'react-native'
+import {View, TextInput, Keyboard, Alert} from 'react-native'
 import { DefaultButton } from '../../utils/formElements/DefaultButton'
 
 const CommentCreate = (props) => {

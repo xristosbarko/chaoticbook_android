@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import ImagePicker from 'react-native-image-picker'
-import { View, Image, TextInput, Button, StyleSheet, Alert } from 'react-native'
+import { View, Alert } from 'react-native'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
 import { connect } from 'react-redux'
@@ -9,7 +8,9 @@ import FormElements from './Form'
 import {onChangeHandler} from '../../utils/onChangeHandler'
 import {formElementsToArray} from '../../utils/formElementsToArray'
 import RenderForm from '../../utils/renderForm'
-import * as actions from '../../store/actions/index'
+import { homePosts } from '../../store/actions/homePosts'
+import { userProfile } from '../../store/actions/userProfile'
+import { profilePosts } from '../../store/actions/profilePosts'
 import { resetForm } from '../../utils/resetForm'
 import { errorMessages } from '../../utils/errorMessages'
 import { styles } from './styles'
@@ -122,9 +123,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onHomePosts: () => dispatch(actions.homePosts()),
-    onUserProfile: () => dispatch(actions.userProfile()),
-    onProfilePosts: () => dispatch(actions.profilePosts())
+    onHomePosts: () => dispatch(homePosts()),
+    onUserProfile: () => dispatch(userProfile()),
+    onProfilePosts: () => dispatch(profilePosts())
   }
 }
 

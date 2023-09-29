@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, Text, FlatList} from 'react-native'
+import {View, FlatList} from 'react-native'
 import { onUsernamePressedHandler } from '../Users/Navigation'
 
 import UserAcceptOrDecline from '../../components/PendingFollows/UserAcceptOrDecline'

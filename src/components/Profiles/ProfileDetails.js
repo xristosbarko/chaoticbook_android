@@ -1,7 +1,6 @@
 import React from 'react'
 import { View, Text, Image, TouchableWithoutFeedback, StyleSheet } from 'react-native'
 import { connect } from 'react-redux'
-import {Button} from 'react-native'
 import { DefaultButton } from '../../utils/formElements/DefaultButton'
 
 

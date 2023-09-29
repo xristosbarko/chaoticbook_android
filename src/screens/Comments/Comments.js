@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, FlatList, ActivityIndicator } from 'react-native'
+import { View, FlatList, ActivityIndicator } from 'react-native'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
 import { onUsernamePressedHandler } from './../Users/Navigation'

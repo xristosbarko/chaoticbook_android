@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
-import { View, Text, FlatList, ActivityIndicator } from 'react-native'
-import * as actions from '../../store/actions/index'
+import { View, FlatList, ActivityIndicator } from 'react-native'
+import { userProfile } from '../../store/actions/userProfile'
+import { profilePostsLoadMore, profilePosts } from '../../store/actions/profilePosts'
 import { Navigation } from 'react-native-navigation'
 
 import ProfilePostDetails from '../../components/Posts/ProfilePostDetails'
@@ -259,9 +260,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onUserProfile: () => dispatch(actions.userProfile()),
-		onProfilePostsLoadMore: () => dispatch(actions.profilePostsLoadMore()),
-		onProfilePosts: () => dispatch(actions.profilePosts())
+		onUserProfile: () => dispatch(userProfile()),
+		onProfilePostsLoadMore: () => dispatch(profilePostsLoadMore()),
+		onProfilePosts: () => dispatch(profilePosts())
 	}
 }
 

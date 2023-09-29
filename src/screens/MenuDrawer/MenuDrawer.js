@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   View,
   Text,
-  Dimensions,
   StyleSheet,
   TouchableOpacity,
   Platform
@@ -10,7 +9,7 @@ import {
 import Icon from "react-native-vector-icons/Ionicons";
 import { connect } from "react-redux";
 
-import { logout } from "../../store/actions/index";
+import { logout } from "../../store/actions/auth";
 
 class MenuDrawer extends Component {
   render() {

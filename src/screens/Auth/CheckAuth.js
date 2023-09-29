@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
-import * as actions from '../../store/actions/index'
-import { startAuthTabs, startMainTabs } from '../Tabs/index'
+import { authCheckState } from '../../store/actions/auth'
 import { View, Text } from 'react-native'
 import { APP_NAME } from '../../../appConfig'
 
@@ -30,7 +29,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		authCheckState: () => dispatch(actions.authCheckState())
+		authCheckState: () => dispatch(authCheckState())
 	}
 }
 

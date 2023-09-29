@@ -4,9 +4,8 @@ import {onChangeHandler} from '../../utils/onChangeHandler'
 import {formElementsToArray} from '../../utils/formElementsToArray'
 import RenderForm from '../../utils/renderForm'
 import { connect } from 'react-redux'
-import * as actions from '../../store/actions/index'
-import { Text, Button, TouchableWithoutFeedback, Keyboard, Alert, View, TouchableNativeFeedback } from 'react-native'
-import { Navigation } from 'react-native-navigation'
+import { auth } from '../../store/actions/auth'
+import { Text, Keyboard, Alert, View } from 'react-native'
 import { styles } from './styles'
 import { DefaultButton } from '../../utils/formElements/DefaultButton'
 
@@ -77,7 +76,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onAuth: (username, password) => dispatch(actions.auth(username, password))
+        onAuth: (username, password) => dispatch(auth(username, password))
     }
 }
 

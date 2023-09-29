@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, Text, FlatList, ActivityIndicator } from 'react-native'
+import { View, FlatList, ActivityIndicator } from 'react-native'
 import PostDetails from '../../components/Posts/PostDetails'
-import * as actions from '../../store/actions/index'
-import { Navigation } from 'react-native-navigation'
+import { homePostsLoadMore, homePosts } from '../../store/actions/homePosts'
 import { styles } from './styles'
 
 class Home extends Component {
@@ -66,8 +65,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onHomePostsLoadMore: () => dispatch(actions.homePostsLoadMore()),
-		onHomePosts: () => dispatch(actions.homePosts())
+		onHomePostsLoadMore: () => dispatch(homePostsLoadMore()),
+		onHomePosts: () => dispatch(homePosts())
 	}
 }
 

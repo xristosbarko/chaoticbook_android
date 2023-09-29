@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, FlatList, ActivityIndicator } from 'react-native'
+import { View, TextInput, FlatList, ActivityIndicator } from 'react-native'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
 import { onUsernamePressedHandler } from './../Users/Navigation'
 import { connect } from 'react-redux'
 import UserDetails from '../../components/Users/UserDetails'
-import { Navigation } from 'react-native-navigation'
 import { FlatListItemSeparator } from '../../shared/FlatListItemSeparator'
 
 class Search extends Component {

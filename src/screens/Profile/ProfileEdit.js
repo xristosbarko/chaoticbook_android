@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, TextInput, Button, TouchableWithoutFeedback, Alert } from 'react-native'
+import { View, Alert } from 'react-native'
 import axios from 'axios'
 import { API_ROOT } from '../../../appConfig'
 import { connect } from 'react-redux'
@@ -9,7 +9,7 @@ import {onChangeHandler} from '../../utils/onChangeHandler'
 import {initializeInstance} from '../../utils/initializeInstance'
 import {formElementsToArray} from '../../utils/formElementsToArray'
 import RenderForm from '../../utils/renderForm'
-import * as actions from '../../store/actions/index'
+import { userProfile } from '../../store/actions/userProfile'
 import { errorMessages } from '../../utils/errorMessages'
 import { DefaultButton } from '../../utils/formElements/DefaultButton'
 
@@ -135,7 +135,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
 	return {
-		onUserProfile: () => dispatch(actions.userProfile())
+		onUserProfile: () => dispatch(userProfile())
 	}
 }
 
